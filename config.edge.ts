@@ -1,12 +1,12 @@
 import type { AppConfig } from "./lib/edge/types.ts";
 
-import { prompt } from "./prompts/movie-critic.ts";
+import { prompt } from "./prompts/job-counsellor.ts";
 // import { prompt } from "./prompts/tour-guide.ts";
 
 export const appConfig: AppConfig = {
   // This should be set in an environment variable
   // See https://platform.openai.com/account/api-keys
-  OPENAI_API_KEY: Deno.env.get("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") ?? "",
+  OPENAI_API_KEY: Deno.env.get("OPENAI_API_KEY") ?? "",
 
   // The maximum number of message in the history to send to the API
   // You should also set this in the config.browser.ts file.
@@ -27,7 +27,7 @@ export const appConfig: AppConfig = {
   // This can be a plain string if you'd prefer, or you can use
   // information from the request or context to generate it.
   systemPrompt: (_req, context) => `${prompt}
-Respond with valid markdown. Put movie names in bold. Knowledge cutoff September 2021.
+Respond with valid markdown. Put job titles in bold. Knowledge cutoff September 2021.
 Current date: ${new Date().toDateString()}.
 User location: ${context.geo.city}, ${context.geo.country}`,
 };
