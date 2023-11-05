@@ -6,7 +6,7 @@ import { prompt } from "./prompts/movie-critic.ts";
 export const appConfig: AppConfig = {
   // This should be set in an environment variable
   // See https://platform.openai.com/account/api-keys
-  OPENAI_API_KEY: Deno.env.get("OPENAI_API_KEY") ?? "",
+  OPENAI_API_KEY: Deno.env.get("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") ?? "",
 
   // The maximum number of message in the history to send to the API
   // You should also set this in the config.browser.ts file.

@@ -68,7 +68,7 @@ export default function Index() {
                       className="underline"
                       href="https://github.com/ascorbic/daneel"
                     >
-                      Daneel
+                      Chat GPT
                     </a>
                   </p>
                 </div>
