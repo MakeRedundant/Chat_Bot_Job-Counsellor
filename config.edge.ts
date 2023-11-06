@@ -8,8 +8,6 @@ export const appConfig: AppConfig = {
   // See https://platform.openai.com/account/api-keys
   OPENAI_API_KEY: Deno.env.get("OPENAI_API_KEY") ?? "",
 
-  //OPENAI_API_KEY = "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"
-
   // The maximum number of message in the history to send to the API
   // You should also set this in the config.browser.ts file.
   historyLength: 8,
